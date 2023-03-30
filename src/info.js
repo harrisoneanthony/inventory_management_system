@@ -7,7 +7,7 @@ class Info extends React.Component {
         this.state = {
             count: 0,
         };
-        this.buttonPressed = this.buttonPressed.bind(this);
+        // this.buttonPressed = this.buttonPressed.bind(this);
     }
 
     buttonPressed(){
@@ -19,9 +19,8 @@ class Info extends React.Component {
     render(){
         return(
             <div>
-                {" "}
                 <p>Count: {this.state.count}</p>
-                <button onClick={this.buttonPressed}>Click me!</button>
+                <button onClick={() => this.buttonPressed()}>Click me!</button>
             </div>
         )
         // const title= this.props.title;
