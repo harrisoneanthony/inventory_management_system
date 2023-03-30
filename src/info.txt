@@ -1,3 +1,6 @@
+***CODE FROM INFO.JS FILE FROM DEMO FOR LEARNING PROPS, PROPTYPES, AND STATE***
+
+
 import React from "react";
 // import { propTypes } from "prop-types";
 
