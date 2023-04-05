@@ -21,13 +21,16 @@ const [brand, setBrand] = useState("");
     }
 
     return(
-        <div>
-            <h2>Add an Item</h2>
-            <form>
+        <div className="container">
+            <div className="row">
+                <h2>Add an Item</h2>
+            </div>
+            <div className="row">
                 <label htmlFor="name-field">Name:</label>
                 <input 
                     id="name-field" 
                     type="text" 
+                    className="form-control"
                     value={name} 
                     onChange={(e) => setName(e.target.value)}
                 />
@@ -35,6 +38,7 @@ const [brand, setBrand] = useState("");
                 <input 
                     id="price-field" 
                     type="number" 
+                    className="form-control"
                     value={price} 
                     onChange={(e) => setPrice(e.target.value)}
                 />
@@ -42,6 +46,7 @@ const [brand, setBrand] = useState("");
                 <input 
                     id="type-field" 
                     type="text" 
+                    className="form-control"
                     value={type} 
                     onChange={(e) => setType(e.target.value)}
                 />
@@ -49,13 +54,19 @@ const [brand, setBrand] = useState("");
                 <input 
                     id="brand-field" 
                     type="text" 
+                    className="form-control"
                     value={brand} 
                     onChange={(e) => setBrand(e.target.value)}
                 />
-                <button type="button" onClick={addItemButtonPressed}>
+            </div>
+            <div className="row">
+                <button 
+                    type="button" 
+                    className=" col-4 mt-3 btn btn-primary" 
+                    onClick={addItemButtonPressed}>
                     Add Item
                 </button>
-            </form>
+            </div>
         </div>
     );
 }
