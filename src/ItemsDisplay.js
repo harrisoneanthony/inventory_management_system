@@ -1,7 +1,7 @@
 function ItemsDisplay(props) {
     const showItem = (item) => {
         return (
-            <tr>
+            <tr key={item.id}>
                 <th scope="row">{item.id}</th>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
@@ -16,7 +16,7 @@ function ItemsDisplay(props) {
         <h2>Items</h2>
     </div>
     <div className="row">
-        <table className="table  table-striped">
+        <table className="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
