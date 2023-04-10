@@ -1,12 +1,20 @@
 import './App.css';
 import SearchBar from "./SearchBar";
 import AddItem from './AddItem';
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import ItemsDisplay from './ItemsDisplay';
+// import Test from './Class';
 
 function App() {
   const [filters, setFilters] = useState({});
   const [data, setData] = useState({ items: []});
+  // const [showTest, setShowTest] = useState(false);
+  useEffect(() => {
+    fetch("http://localhost:3000/items")
+    .then((response) => response.json())
+    .then((data) => setData({items: data }));
+
+  }, []);
 
   const updateFilters = (searchParams) => {
     setFilters(searchParams);
@@ -18,7 +26,7 @@ function App() {
     const requestOptions = {
       method: "POST",
       headers: {
-        "content-Type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(item),
     };
@@ -66,6 +74,7 @@ function App() {
       <div className='row'>
         <AddItem addItem={addItemToData}/>
       </div>
+      {/* {showTest ? <Test destroy={setShowTest} /> : null} */}
     </div>
   );
 }

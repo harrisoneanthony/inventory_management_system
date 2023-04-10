@@ -2,16 +2,16 @@
   "items": [
     {
       "name": "cookies",
-      "price": "2",
+      "price": "4",
       "type": "choco",
-      "brand": "homemade",
+      "brand": "og",
       "id": 1
     },
     {
-      "name": "cookies",
+      "name": "oatmeal",
       "price": "3",
-      "type": "test",
-      "brand": "test",
+      "type": "steel cut",
+      "brand": "quaker",
       "id": 2
     }
   ]
