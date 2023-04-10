@@ -6,13 +6,6 @@
       "type": "choco",
       "brand": "og",
       "id": 1
-    },
-    {
-      "name": "oatmeal",
-      "price": "3",
-      "type": "steel cut",
-      "brand": "quaker",
-      "id": 2
     }
   ]
 }
